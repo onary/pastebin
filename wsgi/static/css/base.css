@@ -1,0 +1,130 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font: normal 0.8em sans-serif, helvetica, arial;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    float: left;
+}
+
+#ar {
+    direction: rtl;
+    float: right;
+}
+
+code {
+    direction: ltr;
+}
+
+h1 a{color: #000; text-decoration: underline;}
+
+#header {
+    background-color: #D3DCE3;
+    display: block;
+}
+
+#lang_en, #lang_ru, #lang_ar{
+    display: block;
+    float: left;
+    margin-right: 5px;
+}
+
+.lang-wrapper {
+    display: inline;
+    position: absolute;
+    right: 25%;
+    top: 0px;
+}
+#ar .lang-wrapper {
+    right: 75%;
+}
+
+#ar #lang_en, #ar #lang_ru, #ar #lang_ar{
+    float: right;
+    margin-right: 0px;
+    margin-left: 5px;
+}
+
+.left-column {
+    width: 50%;
+    float: left;
+}
+
+#ar .left-column {
+    float: right;
+}
+
+.right-column {
+    padding: 0 30px;
+    float: left;
+    max-width: 40%
+}
+
+#ar .right-column {
+    float: right;
+}
+
+.page-paste .left-column {
+    width: 66%;
+}
+
+.page-paste .right-column {
+    max-width: 25%;
+}
+
+#id_code {
+    border: 1px solid;
+    width: 100%;
+    height: 400px;
+    clear: both;
+    display: block;
+    direction: ltr;
+}
+
+label {
+    font-size: 140%;
+    float: left;
+    display: block;
+    margin: 5px 0;
+    width: 200px;
+}
+
+#ar label {
+    float: right;
+}
+
+#id_syntax, #id_title, #id_expiration_choice, #submit {
+    padding: 4px 0;
+    margin: 5px 100px 5px 0;
+    width: 200px;
+}
+
+
+#ar #id_syntax, #ar #id_title, #ar #id_expiration_choice, #ar #submit {
+    margin: 5px 0 5px 100px;
+}
+
+input {
+    margin: 5px 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.errorlist {
+    color: red;
+}
+
+input, textarea, select, .dp-highlighter {
+    border: solid 1px #ccc;
+}
+
+h3 {
+    margin: 0
+}
+

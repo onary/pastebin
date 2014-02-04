@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load tz %}
+
+{% block body %}
+    <div class="left-column">
+        <form name="paste_form" method="post" action="{% url 'home' %}">
+            {% csrf_token %}
+            {{ form|safe }}
+            <input type="submit" value="{% trans 'Submit' %}" id="submit" />
+            <input type="hidden" value="{{ pk }}" name="pk" />
+        </form>
+    </div>
+    <div class="right-column">
+        {% if pastes %}
+            <h2> {% trans "Recent" %}:</h2>
+            <ul>
+                {% get_current_timezone as TIME_ZONE %}
+                {% for p in pastes %}
+                    <li><a href="{{ p.get_absolute_url }}">{{ p|truncatechars:30 }}</a> {% trans 'Expire' %}: {{ p.expiration|localtime }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% load i18n %}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>{% trans "Pastebin" %}</title>
+	{% load staticfiles %}
+	<link rel="stylesheet" href="{% static "css/base.css" %}" type="text/css" />
+	
+	{% block head_extra %}
+	{% endblock %}
+</head>
+<body id="{{ request.LANGUAGE_CODE }}">
+	<div id="header"><h1><a href="{% url 'home' %}">{% trans "Pastebin" %}</a></a></h1> 
+		<div class="lang-wrapper">
+			<p>{% trans "Chosen language" %}: {{ request.LANGUAGE_CODE }}</p>
+			{% get_language_info_list for LANGUAGES as languages %}
+			{% for lang in languages %}
+				<form id='lang_{{ lang.code }}' action='/i18n/setlang/' method='POST'>
+				 {% csrf_token %}
+				<input type='hidden' name='language' value='{{ lang.code }}'/>
+				<a href='#' title='{% trans lang.name %}' onclick="document.getElementById('lang_{{ lang.code }}').submit()">
+					<img src='/static/img/{{ lang.code }}.png'/>
+				</a>
+			</form>
+			{% endfor %}
+		</div>
+	</div>
+	{% block body %}
+	{% endblock %}
+</body>
+</html> 

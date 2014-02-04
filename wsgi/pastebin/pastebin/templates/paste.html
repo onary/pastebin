@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load tz %}
+
+{% block head_extra %}
+	{% load staticfiles %}
+	<link type="text/css" rel="stylesheet" href="{% static "css/SyntaxHighlighter.css" %}"></link>
+	<script class="javascript" src="{% static "js/shCore.js" %}"></script>
+	<script class="javascript" src="{% static "js/shBrushCSharp.js" %}"></script>
+	<script class="javascript" src="{% static "js/shBrushPhp.js" %}"></script>
+	<script class="javascript" src="{% static "js/shBrushJScript.js" %}"></script>
+	<script class="javascript" src="{% static "js/shBrushJava.js" %}"></script>
+	<script class="javascript" src="{% static "js/shBrushVb.js" %}"></script>
+	<script class="javascript" src="{% static "js/shBrushSql.js" %}"></script>
+	<script class="javascript" src="{% static "js/shBrushXml.js" %}"></script>
+	<script class="javascript" src="{% static "js/shBrushDelphi.js" %}"></script>
+	<script class="javascript" src="{% static "js/shBrushPython.js" %}"></script>
+	<script class="javascript" src="{% static "js/shBrushRuby.js" %}"></script>
+	<script class="javascript" src="{% static "js/shBrushCss.js" %}"></script>
+	<script class="javascript" src="{% static "js/shBrushCpp.js" %}"></script>
+{% endblock %}
+
+{% block body %}
+<div class="page-paste">
+	<div class="left-column">
+		<code><pre name="code" class="{{ paste.syntax|lower }}">{{ paste.code }}</pre></code>
+	</div>
+	<div class="right-column">
+		<h3>{% trans 'Title' %}: {{ paste.title|truncatechars:20 }}</h3>
+		<h3>{% trans 'Syntax' %}: {{ paste.syntax }}</h3>
+		<h3>{% trans 'Expire' %}: {{ paste.expiration|localtime }}</h3>
+		<h2>{% trans 'Actions' %}:</h2>
+			<ul>
+				<li><a href="{% url 'repaire' paste.id %}">{% trans 'repair' %}</a></li>
+				<li><a href="{% url 'repaire' paste.id %}?q=new">{% trans 'create new versions' %}</a></li>
+				<li><a href="{% url 'delete' paste.id %}">{% trans 'delete' %}</a></li>
+			</ul>
+	</div>
+</div>
+	<script class="javascript">
+		dp.SyntaxHighlighter.HighlightAll('code');
+	</script>
+{% endblock %}

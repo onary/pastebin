@@ -1,0 +1,116 @@
+# This file is distributed under the same license as the Django package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Django\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-05-24 12:02+0300\n"
+"PO-Revision-Date: 2011-03-04 18:40+0000\n"
+"Last-Translator: dnx <sinednx@gmail.com>\n"
+"Language-Team: Russian <>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+
+#: paste/models.py:6
+msgid "10 Minutes"
+msgstr "10 минут"
+
+#: paste/models.py:7
+msgid "1 Hour"
+msgstr "час"
+
+#: paste/models.py:8
+msgid "1 Day"
+msgstr "день"
+
+#: paste/models.py:9
+msgid "1 Week"
+msgstr "неделя"
+
+#: paste/models.py:10
+msgid "2 Weeks"
+msgstr "2 недели"
+
+#: paste/models.py:11
+msgid "1 Month (30 days)"
+msgstr "1 месяц (30 дней)"
+
+#: paste/models.py:22
+msgid "Code"
+msgstr "Код"
+
+#: paste/models.py:23 pastebin/templates/paste.html:28
+msgid "Title"
+msgstr "Заголовок"
+
+#: paste/models.py:26
+msgid "Untitled"
+msgstr "Безымянный"
+
+#: paste/models.py:28 pastebin/templates/paste.html:29
+msgid "Syntax"
+msgstr "Синтаксис"
+
+#: paste/models.py:29
+msgid "Created"
+msgstr "Создано"
+
+#: paste/models.py:30
+msgid "Expiration"
+msgstr "Время жизни"
+
+#: paste/models.py:33
+msgid "Expiration date"
+msgstr "Время жизни"
+
+#: pastebin/settings.py:51 pastebin/templates/base.html:30
+msgid "Russian"
+msgstr "Русский"
+
+#: pastebin/settings.py:52 pastebin/templates/base.html:22
+msgid "English"
+msgstr "Английский"
+
+#: pastebin/settings.py:53 pastebin/templates/base.html:38
+msgid "Arabic"
+msgstr "Арабский"
+
+#: pastebin/templates/base.html:7 pastebin/templates/base.html.py:15
+msgid "Pastebin"
+msgstr "Пастбин"
+
+#: pastebin/templates/base.html:17
+msgid "Chosen language"
+msgstr "Выбранный язык"
+
+#: pastebin/templates/index.html:9
+msgid "Submit"
+msgstr "Загрузить"
+
+#: pastebin/templates/index.html:15
+msgid "Recent"
+msgstr "Недавние"
+
+#: pastebin/templates/index.html:18 pastebin/templates/paste.html:30
+msgid "Expire"
+msgstr "Истекает"
+
+#: pastebin/templates/paste.html:31
+msgid "Actions"
+msgstr "Действия"
+
+#: pastebin/templates/paste.html:33
+msgid "repair"
+msgstr "исправить"
+
+#: pastebin/templates/paste.html:34
+msgid "create new versions"
+msgstr "создать новую версию"
+
+#: pastebin/templates/paste.html:35
+msgid "delete"
+msgstr "удалить"
