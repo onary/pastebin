@@ -6,3 +6,5 @@ This is a simple pastebin instance which support following features
   * There are three languages supported in the UI. One of them is RTL (with UI reacting to it). 
   * Pastes expire after configured time.
   * There are admin section for managing pastes
+  * Deployed on openshift
+Working example you can find at: http://pastebin-pastebin.rhcloud.com/
